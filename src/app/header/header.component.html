@@ -1,0 +1,11 @@
+<mat-card class="example-card">
+
+  <mat-card-title>Currency converter</mat-card-title>
+  <mat-card-content>
+    <p>Current currency exchange rates</p>
+    <div *ngFor="let item of data | keyvalue">
+      {{item.key}} : {{(1 / item.value).toFixed(2)}} UAH
+    </div>
+  </mat-card-content>
+  <mat-progress-bar *ngIf="!data" mode="indeterminate"></mat-progress-bar>
+</mat-card>

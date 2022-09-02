@@ -1,0 +1,43 @@
+<fieldset [formGroup]="allInputsControl">
+  <mat-form-field appearance="fill">
+    <mat-label>Input amount</mat-label>
+    <input
+      matInput
+      formControlName="firstAmount"
+      (input)="onChangeFirstInput($event)"
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select currency</mat-label>
+    <mat-select
+      formControlName="firstCurrency"
+      (selectionChange)="onChangeCurrency()"
+    >
+      <mat-option value="UAH">UAH</mat-option>
+      <mat-option value="USD">USD</mat-option>
+      <mat-option value="EUR">EUR</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Input amount</mat-label>
+    <input
+      matInput
+      formControlName="secondAmount"
+      (input)="onChangeSecondInput($event)"
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select currency</mat-label>
+    <mat-select
+      formControlName="secondCurrency"
+      (selectionChange)="onChangeCurrency()"
+    >
+      <mat-option value="UAH">UAH</mat-option>
+      <mat-option value="USD">USD</mat-option>
+      <mat-option value="EUR">EUR</mat-option>
+    </mat-select>
+  </mat-form-field>
+</fieldset>
